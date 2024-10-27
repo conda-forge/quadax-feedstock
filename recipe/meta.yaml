@@ -1,5 +1,5 @@
 {% set name = "quadax" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quadax-{{ version }}.tar.gz
-  sha256: 842f95315f6f444f34713596d6e158f21cc54dc25b1ea1e1231821ff21f27723
+  sha256: e88cb984737edcb7755df7e04bfd9642df0d9d49b0b4d76024c8c03dcee76bc4
 
 build:
   noarch: python
