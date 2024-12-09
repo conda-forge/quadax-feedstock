@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=40.8.0
     - wheel
     - versioneer-518
     - versioneer
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - equinox
     - jax >=0.3.2,<=0.5.0
     - numpy >=1.20.0,<2.0
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/f0uriest/quadax
