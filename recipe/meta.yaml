@@ -1,5 +1,5 @@
 {% set name = "quadax" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quadax-{{ version }}.tar.gz
-  sha256: e88cb984737edcb7755df7e04bfd9642df0d9d49b0b4d76024c8c03dcee76bc4
+  sha256: c0cb80b3abb26b6b7cda5e30ceb6f1e8fd3c1a82ef21ecbcbd903cc58d6821e7
 
 build:
   noarch: python
@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=40.8.0
     - wheel
     - versioneer-518
     - versioneer
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - equinox
     - jax >=0.3.2,<=0.5.0
     - numpy >=1.20.0,<2.0
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/f0uriest/quadax
