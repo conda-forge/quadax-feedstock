@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quadax-{{ version }}.tar.gz
-  sha256: b1ddc96339fd71c9f9f05588bcfe44468eaa1681046a1632e32278d75164c399
+  url: https://github.com/f0uriest/quadax/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 62ad201e0e2638bf45aae50f001809c5ebcd206352e11994602f0f12f2795f04
 
 build:
   noarch: python
@@ -19,14 +19,13 @@ requirements:
     - python {{ python_min }}
     - setuptools >=40.8.0
     - wheel
-    - versioneer-518
     - versioneer
     - pip
   run:
     - python >={{ python_min }}
-    - equinox
-    - jax >=0.3.2,<=0.5.0
-    - numpy >=1.20.0,<2.0
+    - equinox >=0.11.0,<0.12
+    - jax >=0.3.2,<0.6.0
+    - numpy >=1.20.0,<3.0
 
 test:
   imports:
