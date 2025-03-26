@@ -1,5 +1,5 @@
 {% set name = "quadax" %}
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/f0uriest/quadax/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 62ad201e0e2638bf45aae50f001809c5ebcd206352e11994602f0f12f2795f04
+  sha256: 006dc011f396017264736e768e6d30fd5009d3ee4e4a1b82f48c343d76e9ae5e
 
 build:
   noarch: python
