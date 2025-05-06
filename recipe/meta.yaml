@@ -1,5 +1,5 @@
 {% set name = "quadax" %}
-{% set version = "0.2.7" %}
+{% set version = "0.2.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/f0uriest/quadax/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 006dc011f396017264736e768e6d30fd5009d3ee4e4a1b82f48c343d76e9ae5e
+  sha256: b68e836e20f4473edcd4584a23348c51a6ede0575086c168aa257f19fd0b98e2
 
 build:
   noarch: python
@@ -23,9 +23,9 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - equinox >=0.11.0,<=0.11.12
-    - jax >=0.3.2,<=0.5.3
-    - numpy >=1.20.0,<=2.2.4
+    - equinox >=0.11.0,<0.13
+    - jax >=0.4.36,<0.7
+    - numpy >=1.20.0,<2.3
 
 test:
   imports:
